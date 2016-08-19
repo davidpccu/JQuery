@@ -1,37 +1,66 @@
 ﻿<html>
+
 <head>
-<script type="text/JavaScript">
-
-function timedRefresh(timeoutPeriod) {
-setTimeout("location.reload(true);",timeoutPeriod);
-}
-
-</script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#hide").click(function() {
+            $("p").hide(1000);
+        });
+        $("#show").click(function() {
+            $("p").show(1000);
+        });
+        $("#toggle").click(function() {
+            $("p").toggle(1000);
+        });
+        $("#slideDown").click(function() {
+            $(".panel").slideDown("slow");
+        });
+        $("#slideUp").click(function() {
+            $(".panel").slideUp("slow");
+        });
+        $("#slideToggle").click(function() {
+            $(".panel").slideToggle("slow");
+        });
+        $("#cmdanimate").click(function() {
+            var div = $("#animate");
+            div.animate({
+                height: '300px',
+                opacity: '0.4'
+            }, "slow");
+            div.animate({
+                width: '300px',
+                opacity: '0.8'
+            }, "slow");
+            div.animate({
+                height: '100px',
+                opacity: '0.4'
+            }, "slow");
+            div.animate({
+                width: '100px',
+                opacity: '0.8'
+            }, "slow");
+        });
+    });
+    </script>
 </head>
+<p id="p1">(speed,callback); speed 參數規定隱藏/顯示的速度，可以取以下值："slow"、"fast" 或毫秒。</p>
+<button id="hide" type="button">隐藏</button>
+<button id="show" type="button">显示</button>
+<button id="toggle" type="button">切换</button>
+<div class="panel">
+    <p>slideDown()、slideUp()、slideToggle()</p>
+    <p>在 W3School，你可以找到你所需要的所有网站建设教程。</p>
+</div>
+<button id="slideDown" type="button">slideDown()</button>
+<button id="slideUp" type="button">slideUp()</button>
+<button id="slideToggle" type="button">slideToggle()</button>
+<br>
+<button id="cmdanimate" type="button">animate()動畫效果</button>
+<div id="animate" style="background:#98bf21;height:100px;width:100px;position:absolute;">
+</div>
 
-<body onload="JavaScript:timedRefresh(72000);">
-<!--  -->
-<div>
-	<img src="http://chart.finance.yahoo.com/t?s=USDTWD%3dX&lang=zh-Hant-TW&region=TW&width=300&height=180" alt="TWDUSD" width="220" height="140">
-</div>
-<div>
-	<img src="http://chart.finance.yahoo.com/t?s=JPYTWD%3dX&lang=zh-Hant-TW&region=TW&width=300&height=180" alt="TWDJPY" width="220" height="140">
-</div>
-<div>
-	<img src="http://chart.finance.yahoo.com/t?s=AUDTWD%3dX&lang=zh-Hant-TW&region=TW&width=300&height=180" alt="TWDAUD" width="220" height="140">
-</div>
-<!--  -->
-<div>
-	<img src="http://goldprice.org/NewCharts/gold/images/gold_1d_o_USD.png" alt="Gold Price per ounce in United States Dollars" width="180" height="114">
-</div>
-<!--  -->
-<div style="width:180px;text-align:center;" >
-	<div id="rate1492" style='align:center;font-size:12px;color:#333333;'>
-		<div id="wwwtaiwanrateorg3" style='text-align:left;'>
-			<script src="http://www.taiwanrate.org/z.php?z=ex_tc_widget3&c=94abf0"></script></div><div style="text-align:center;">
-			<a href="http://www.taiwanrate.org/" id="taiwanrateorg" title="匯率" alt="匯率" target='_blank'><font size=2>匯率</font></a>
-		</div>
-	</div>
-</div>
+<body>
 </body>
+
 </html>
