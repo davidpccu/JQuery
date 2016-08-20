@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 
 <head>
     <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
@@ -41,6 +41,18 @@
                 opacity: '0.8'
             }, "slow");
         });
+        
+        function flash(){
+    $('#flash').show().fadeOut('600');
+  };
+  
+  $('#bind').on('click', function(){
+    $('#display').on('click', flash);
+  });
+  
+  $('#unbind').on('click', function(){
+    $('#display').off('click');
+  });
     });
     </script>
 </head>
@@ -57,9 +69,14 @@
 <button id="slideToggle" type="button">slideToggle()</button>
 <br>
 <button id="cmdanimate" type="button">animate()動畫效果</button>
-<div id="animate" style="background:#98bf21;height:100px;width:100px;position:absolute;">
+<div id="animate" style="background:#98bf21;height:100px;width:100px;position:absolute; left:250px; ">
 </div>
-
+<br>
+<button id="display">display</button>
+<button id="bind">add flash</button>
+<button id="unbind">remove flash</button>
+<div id='flash' style='display:none'>Click!</div>
+    
 <body>
 </body>
 
