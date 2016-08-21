@@ -20,4 +20,62 @@ Change a property of the element<br>
 + Adjacent sibling : $('h2 + div') or $('h2 ~ div')
 
 ##Attribute selectors
- 
++ [attribute] : $('a[href]')
++ [attribute="value"] : $('input[type="text"]')
++ [attribute^="value"] : $('a[href^="https://"]')
++ [attribute$="value"] : $('a[href$=".pdf"]')
++ [attribute*="value"] : $('a[href*="missingmanuals.com"]')
+
+##jQuery filters
++ :even / :odd **: $('.striped tr:even')**
++ :first / **:last : $('p:first')**
++ :not() **: $('a:not(.navButton)')**
++ :has() **: $('li:has(a)')**
++ :contains() **: $('a:contains(Click Me!)')**
++ :hidden / :visible **: $('div:hidden').show()**
+
+#Operations
+##Adding Content to a Page
++ .html()
++ .append() / .prepend()
++ .before() / .after()
++ .text()
+
+##Setting and Reading css attributes
++ .addClass()
++ .removeClass()
++ .toggleClass()
++ .css()
+
+##Setting and Reading html attributes
++ .attr()
++ .removeAttr()
+
+#Events
+##Mouse event
++ .click()
++ .dbclick()
++ .mouseup() / .mousedown()
++ .mouseover() / .mouseout() **.hover(function1,  function2)**
++ .mousemove()
+
+##Window event
++ .load()
++ .resize()
++ .scroll()
++ .unload()
+
+##Form event
++ .submit()
++ .reset()
++ .change()
++ .focus() / .blur()
+
+##Keyboard event 
++ .keypress()
++ .keydown()
++ .keyup()
+
+
+
+
