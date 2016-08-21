@@ -28,6 +28,3 @@ sublime基本操作：<br>
 4. Redo ctrl+ shift+ z<br>
 
 
-
-# JQuery
-JQuery學習筆記
