@@ -1,5 +1,5 @@
-# JQuery Write less, do more
-###JQuery學習筆記
+# JQuery 學習筆記 
+###Write less, do more
 
 Select an element on a page<br>
 Do something with the element<br>
