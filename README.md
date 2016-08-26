@@ -1,9 +1,10 @@
 # 關於Sublime text 3的使用
-基本必備安裝： <br>
+
+###基本必備安裝： <br>
 1. Pakage control<br>
 2. Nodejs，需順便安裝npm<br><br>
  
-建議要裝的Package：<br>
+###建議要裝的Package：<br>
 
 1. Alignment: 自動對齊；快捷鍵ctrl+ alt+ a<br>
 2. AutoFileName: 自動路徑提示<br>
@@ -20,7 +21,7 @@
 13. SublimeLinter-jshint: 幫你檢查javascript；需安裝npm install -g jshint<br>
 14. SublimeLinter-csslint: 幫你檢查css；需安裝npm install -g csslint<br>
 
-sublime基本操作：<br>
+###sublime基本操作：<br>
 
 1. 存檔: ctrl+ s<br>
 2. 註解: ctrl+ /<br>
