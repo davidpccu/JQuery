@@ -76,6 +76,8 @@ Change a property of the element<br>
 + .keydown()
 + .keyup()
 
+#Ajax
+待續....
 
 
 
