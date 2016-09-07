@@ -1,5 +1,3 @@
-# Copyright by Lwsu
-
 # 關於Sublime text 3的使用
 
 ###基本必備安裝： <br>
