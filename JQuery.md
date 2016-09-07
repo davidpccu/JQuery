@@ -76,8 +76,70 @@ Change a property of the element<br>
 + .keydown()
 + .keyup()
 
-#Ajax
-待續....
+#Advanced Events
+##Waiting for the HTML to Load
+<pre><code>
+$(document).ready(function() {
+// all of your JavaScript goes in here
+});
+</code></pre>
+or
+<pre><code>
+$(function() {
+// shorthand way of writing
+});
+</code></pre>
 
+##Stopping an Event’s Normal Behavior
+<pre><code>
+$('#menu').click(function(evt){
+evt.preventDefault(); 	// don't follow the link
+return false;  			// don't follow the link
+});
+</code></pre>
 
+##Off Events
+Syntax:
+<pre><code>$('selector).off( events [, selector ] [, functionName ] );</code></pre>
 
+EX:
+<pre><code>
+$('#menu').off('click');
+$('#menu').off();
+</code></pre>
+
+##On Events
+Syntax:
+<pre><code>$('selector).on( events [, selector ] [, myData ] [, functionName ] );</code></pre>
+
+EX:
+<pre><code>
+$('selector).on('click', function(){...});
+$('selector).click(function(){...})
+</code></pre>
+
+##Other Ways to Use the on() Function
+<pre><code>
+$(document).on( 'click keypress', function() {
+  $('#lightbox').hide();
+});
+
+$('#theElement').on({ 
+  'click' : function() {
+    // do something interesting
+  },
+  'mouseover' : function() {
+    // do something interesting
+  }
+});
+</code></pre>
+
+##Delegation
+Syntax:
+<pre><code>$('selector_A').on('click', selector_B, myData, functionName);</code></pre>
+EX:
+<pre><code>
+( "#bind" ).click(function() {
+ 	$( "body" ).on( "click", "#theone", flash )
+});
+</code></pre>
