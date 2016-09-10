@@ -10,7 +10,7 @@ Change a property of the element<br>
 4. Add/remove a class attribute<br>
 
 ##Basic selectors
-+ Element selectors : $('p')
++ Element selectors : <pre><code> $('p') </code></pre>
 + Class selectors   : $('.intro')
 + ID selectors      : $('#demo')
 
