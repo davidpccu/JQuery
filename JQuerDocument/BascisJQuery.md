@@ -76,6 +76,22 @@ Change a property of the element<br>
 + .keydown()
 + .keyup()
 
+EX:
+<pre><code>
+//點擊txtbox後，模擬鍵盤事件
+$('#TextBox1').click(function () {
+    var e = $.Event('keyup');
+    e.which = 40; 
+    $('#TextBox1').trigger(e);
+});
+
+$('#TextBox1').keyup(function (event) {
+    if (event.which == 40) {
+        alert("按下了↓");
+    }
+});
+</code></pre>
+
 #Advanced Events
 ##Waiting for the HTML to Load
 <pre><code>
