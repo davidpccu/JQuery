@@ -11,28 +11,28 @@ Change a property of the element<br>
 
 ##Basic selectors
 + Element selectors : <pre><code> $('p') </code></pre>
-+ Class selectors   : $('.intro')
-+ ID selectors      : $('#demo')
++ Class selectors   : <pre><code> $('.intro') </code></pre>
++ ID selectors      : <pre><code> $('#demo') </code></pre>
 
 ##Advanced selectors
-+ Descendant selectors : $('#navBar a')
-+ Child selectors : $('body > p')
-+ Adjacent sibling : $('h2 + div') or $('h2 ~ div')
++ Descendant selectors : <pre><code> $('#navBar a') </code></pre>
++ Child selectors : <pre><code> $('body > p') </code></pre>
++ Adjacent sibling : <pre><code> $('h2 + div') or $('h2 ~ div') </code></pre>
 
 ##Attribute selectors
-+ [attribute] : $('a[href]')
-+ [attribute="value"] : $('input[type="text"]')
-+ [attribute^="value"] : $('a[href^="https://"]')
-+ [attribute$="value"] : $('a[href$=".pdf"]')
-+ [attribute*="value"] : $('a[href*="missingmanuals.com"]')
++ [attribute] : <pre><code> $('a[href]') </code></pre>
++ [attribute="value"] : <pre><code> $('input[type="text"]') </code></pre>
++ [attribute^="value"] : <pre><code> $('a[href^="https://"]') </code></pre>
++ [attribute$="value"] : <pre><code> $('a[href$=".pdf"]') </code></pre>
++ [attribute*="value"] : <pre><code> $('a[href*="missingmanuals.com"]') </code></pre>
 
 ##jQuery filters
-+ :even / :odd **: $('.striped tr:even')**
-+ :first / **:last : $('p:first')**
-+ :not() **: $('a:not(.navButton)')**
-+ :has() **: $('li:has(a)')**
-+ :contains() **: $('a:contains(Click Me!)')**
-+ :hidden / :visible **: $('div:hidden').show()**
++ :even / :odd : <pre><code> $('.striped tr:even') </code></pre>
++ :first / :last : <pre><code> $('p:first') </code></pre>
++ :not() : <pre><code> $('a:not(.navButton)') </code></pre>
++ :has() : <pre><code> $('li:has(a)')** </code></pre>
++ :contains() : <pre><code> $('a:contains(Click Me!)') </code></pre>
++ :hidden / :visible : <pre><code> $('div:hidden').show() </code></pre>
 
 #Operations
 ##Adding Content to a Page
