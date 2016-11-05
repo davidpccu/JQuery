@@ -159,3 +159,15 @@ EX:
  	$( "body" ).on( "click", "#theone", flash )
 });
 </code></pre>
+
+#Element
+
+##each
+Syntax:
+<pre><code>$('ul li').each( Integer index, Element element );</code></pre>
+EX:
+<pre><code>
+$('ul li').each(function(index, el) {
+                $(this).hide();
+            });
+</code></pre>
