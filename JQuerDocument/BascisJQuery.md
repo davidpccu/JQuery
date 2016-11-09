@@ -26,6 +26,8 @@ Change a property of the element<br>
 + [attribute$="value"] : <pre><code> $('a[href$=".pdf"]') </code></pre>
 + [attribute*="value"] : <pre><code> $('a[href*="missingmanuals.com"]') </code></pre>
 
+[Attribute Starts With Selector ](https://api.jquery.com/attribute-starts-with-selector/ "Attribute Starts With Selector ")
+
 ##jQuery filters
 + :even / :odd : <pre><code> $('.striped tr:even') </code></pre>
 + :first / :last : <pre><code> $('p:first') </code></pre>
