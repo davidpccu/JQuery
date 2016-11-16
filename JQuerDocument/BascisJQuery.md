@@ -173,3 +173,26 @@ $('ul li').each(function(index, el) {
                 $(this).hide();
             });
 </code></pre>
+
+##remove
+Remove the set of matched elements from the DOM
+<pre><code>$('#img').remove();</code></pre>
+
+##empty
+<pre><code>$("#div1").empty();</code></pre>
+
++ remove() - 刪除被選元素（及其子元素）
++ empty() - 從被選元素中刪除子元素
+
+##detach
+detach() 除了將元素移除之外，會將 jQuery 中所有與該元素有關的資料屬性保存著，也因此後續可以將被移除的元素回復。
+<pre><code>
+var p;
+$( "button" ).click(function() {
+  if ( p ) {
+    p.appendTo( "body" );
+    p = null;
+  } else {
+    p = $( "p" ).detach();
+  }
+</code></pre>
