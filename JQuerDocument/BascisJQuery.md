@@ -30,17 +30,33 @@ Change a property of the element<br>
 
 ##jQuery filters
 + :even / :odd : <pre><code> $('.striped tr:even') </code></pre>
-+ :first / :last / :eq : 
++ :first / :last: 
 EX:
 <pre><code>
 $('.menu_list').children().first(); 
 $('.menu_list').children().last();
+</code></pre>
++ :eq
+<pre><code>
+//過濾掉一組被選取元素，只留下其索引值的元素
 $('.menu_list').children().eq(0);  
-//An integer indicating the 0-based position of the element
 </code></pre>
 
-<pre><code> $('p:first') </code></pre>
-+ :not() : <pre><code> $('a:not(.navButton)') </code></pre>
++ :since 
+<pre><code>
+//過濾掉一組被選擇元素，只留下索引值範圍內元素
+$('.menu_list').children().slice(1, 3);  
+</code></pre>
++ :filter
+<pre><code>
+//過濾掉一組被選擇元素，只留下選擇器的元素
+$('.menu_list').children().filter('.organic');  
+</code></pre>
++ :not :
+<pre><code>
+//過濾掉一組被選擇元素，留下『不』符合元素
+$('.menu_list').children().not('.organic');  
+</code></pre>
 + :has() : <pre><code> $('li:has(a)')** </code></pre>
 + :contains() : <pre><code> $('a:contains(Click Me!)') </code></pre>
 + :hidden / :visible : <pre><code> $('div:hidden').show() </code></pre>
