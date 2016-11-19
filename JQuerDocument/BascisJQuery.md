@@ -43,6 +43,9 @@ Change a property of the element<br>
 + .before() / .after()
 + .text()
 
+##  Replace element
++ .ReplaceWith()
+
 ##Setting and Reading css attributes
 + .addClass()
 + .removeClass()
