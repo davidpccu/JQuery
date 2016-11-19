@@ -30,7 +30,16 @@ Change a property of the element<br>
 
 ##jQuery filters
 + :even / :odd : <pre><code> $('.striped tr:even') </code></pre>
-+ :first / :last : <pre><code> $('p:first') </code></pre>
++ :first / :last / :eq : 
+EX:
+<pre><code>
+$('.menu_list').children().first(); 
+$('.menu_list').children().last();
+$('.menu_list').children().eq(0);  
+//An integer indicating the 0-based position of the element
+</code></pre>
+
+<pre><code> $('p:first') </code></pre>
 + :not() : <pre><code> $('a:not(.navButton)') </code></pre>
 + :has() : <pre><code> $('li:has(a)')** </code></pre>
 + :contains() : <pre><code> $('a:contains(Click Me!)') </code></pre>
