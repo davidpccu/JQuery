@@ -3,7 +3,11 @@
 ###基本必備安裝： <br>
 1. Pakage control<br>
 2. Nodejs，需順便安裝npm<br><br>
- 
+
+###必裝的Package：<br>
+1. Emmet<br>
+2. HTML-CSS-JS Prettify<br>
+3. AutoFileName <br>
 ###建議要裝的Package：<br>
 
 1. Alignment: 自動對齊；快捷鍵ctrl+ alt+ a<br>
