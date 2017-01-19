@@ -7,7 +7,8 @@
 ###必裝的Package：<br>
 1. Emmet<br>
 2. HTML-CSS-JS Prettify<br>
-3. AutoFileName <br>
+3. AutoFileName <br><br>
+
 ###建議要裝的Package：<br>
 
 1. Alignment: 自動對齊；快捷鍵ctrl+ alt+ a<br>
