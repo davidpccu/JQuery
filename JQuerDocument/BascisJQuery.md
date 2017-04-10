@@ -100,6 +100,7 @@ $('.menu_list').children().not('.organic');
 + .reset()
 + .change()
 + .focus() / .blur()
++ .append()
 
 ##Keyboard event 
 + .keypress()
