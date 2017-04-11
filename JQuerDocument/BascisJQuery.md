@@ -27,6 +27,9 @@ Change a property of the element<br>
 + [attribute*="value"] : <pre><code> $('a[href*="missingmanuals.com"]') </code></pre>
 
 [Attribute Starts With Selector ](https://api.jquery.com/attribute-starts-with-selector/ "Attribute Starts With Selector ")
+ 
++ [ :contains() ](https://api.jquery.com/contains-selector/ ":contains() ") //選擇器選取包含指定字符串的元素
+
 
 ##jQuery filters
 + :even / :odd : <pre><code> $('.striped tr:even') </code></pre>
