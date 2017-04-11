@@ -28,7 +28,7 @@ Change a property of the element<br>
 
 [Attribute Starts With Selector ](https://api.jquery.com/attribute-starts-with-selector/ "Attribute Starts With Selector ")
  
-+ [ :contains() ](https://api.jquery.com/contains-selector/ ":contains() ") //選擇器選取包含指定字符串的元素
++  
 
 
 ##jQuery filters
@@ -61,7 +61,7 @@ $('.menu_list').children().filter('.organic');
 $('.menu_list').children().not('.organic');  
 </code></pre>
 + :has() : <pre><code> $('li:has(a)')** </code></pre>
-+ :contains() : <pre><code> $('a:contains(Click Me!)') </code></pre>
++ [ :contains() ](https://api.jquery.com/contains-selector/ ":contains() ") : <pre><code> $('a:contains(Click Me!)') //選擇器選取包含指定字符串的元素 </code></pre>
 + :hidden / :visible : <pre><code> $('div:hidden').show() </code></pre>
 
 #Operations
