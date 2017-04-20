@@ -37,4 +37,5 @@
 + console.log()
 + console.info()
 + console.warn()
-+ console.dir()
++ console.dir(someObject)
++ console.time("test") / console.timeEnd("test")
