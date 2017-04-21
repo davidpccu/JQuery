@@ -21,10 +21,29 @@ $(document).ready(function(){
     //something
 })(jQuery);
 ```
-說明: 這個方式主要是用在jQuery plugin，實際上是執行了一個匿名的function並回傳jQuery物件，當jQuery載入完成後便會開始執行，但無法操作DOM tree。
+說明: 
+1. 這個方式主要是用在jQuery plugin，實際上是執行了一個匿名的function並回傳jQuery物件，當jQuery載入完成後便會開始執行，但無法操作DOM tree。
+2. 基本上是()(para)匿名方法(anonymous function)，傳承jQuery的函式庫，jQuery plugins都是用這樣的架構。
 
-Syntax: 
+### Plugin 樣版
+```
+(function( $ ){
 
+    $.fn.mytoolbox = function() {
+       return this.each(function() {
+             alert("this.innerHTML:"+this.innerHTML);
+       });
+    };
+
+})(jQuery)
+
+$(document).ready( function() {
+        $('#myDIV').mytoolbox();
+})
+
+<div id="myDIV">Hello jQuery Plugin</div>
+```
+[參考](http://expect7.pixnet.net/blog/post/38085270-%5B%E7%A8%8B%E5%BC%8F%5D%5Bjquery%5D-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8Bjquery-plugin!-hello-worl "參考")
 
 ## 其他參考函示庫(圖表)
 + [Charts.js](http://www.chartjs.org/ "Charts.js")
