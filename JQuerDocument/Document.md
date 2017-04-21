@@ -45,7 +45,22 @@ $(document).ready( function() {
 ```
 [參考](http://expect7.pixnet.net/blog/post/38085270-%5B%E7%A8%8B%E5%BC%8F%5D%5Bjquery%5D-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8Bjquery-plugin!-hello-worl "參考")
 
-## 其他參考函示庫(圖表)
-+ [Charts.js](http://www.chartjs.org/ "Charts.js")
-+ [Morris.js](http://morrisjs.github.io/morris.js/index.html "Morris.js")
+## use strict (嚴格模式) strict mode
+```
+"use strict";
+
+function testFunction(){
+    var testvar = 4;
+    return testvar;
+}
+// This causes a syntax error.
+testvar = 5;
+```
+[參考](https://msdn.microsoft.com/library/br230269(v=vs.94).aspx "參考")
+
+
+
+
+
+
 
