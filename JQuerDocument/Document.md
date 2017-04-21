@@ -52,7 +52,7 @@ $(window).on('load', function() {
 });
 ```
 說明 :  jQuery(document).ready() 與 jQuery(window).load() 的差異
-1. 當 document 物件下所有 DOM 物件都可以正確取得時，就會觸發 jQuery.ready() 註冊的 function，這時雖然後 <img src="…" /> 定義的圖片正在下載，但由於 <img> 這個 DOM 物件已經都 ready 了，所以 jQuery 並不會等圖片全部下載完畢才執行 ready 事件。
+1. 當 document 物件下所有 DOM 物件都可以正確取得時，就會觸發 jQuery.ready() 註冊的 function，這時雖然後 ```<img src="…" />``` 定義的圖片正在下載，但由於 ```<img>``` 這個 DOM 物件已經都 ready 了，所以 jQuery 並不會等圖片全部下載完畢才執行 ready 事件。
 2. 而使用 window 的 load 事件，卻是完全不同的行為，jQuery 裡的 window 的 load 事件與 JavaScript 裡的 window.onload 事件一模一樣，註冊在這裡面的事件都會等到整個視窗裡所有資源都已經全部下載後才會執行，例如該頁面有 100 張圖片就會等 100 圖片都下載完才會執行，其中也包括所有 iframe 子頁面的內容必須完整載入。
 
 
