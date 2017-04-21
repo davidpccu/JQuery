@@ -1,20 +1,20 @@
-# jQuery effects
+# jQuery Document
 
-##Basic Showing and Hiding
-+ .show()
-+ .hide()
-+ .toggle()
+## different with document.ready
 
-##Fading Elements In and Out
-+ .fadeIn()
-+ .fadeOut()
-+ .fadeToggle()
-+ .fadeTo()
++ $(function)
+```
+$(function() {
+    //dosomething
+});
+```
++ (function($))(jQuery)
+```
+(function($){
+    //something
+})(jQuery);
+```
 
-##Sliding Elements
-+ .slideDown()
-+ .slideUp()
-+ .slideToggle()
 
 ##Animates
 Syntax: 
@@ -25,11 +25,6 @@ $('#message').animate(
 {  left: '650px',   opacity: 0.5,  fontSize: '24px'  },  1500
 );
 </code></pre>
-
-##Easings
-+ jQuery can only use 'swing' or 'linear' effect
-+ jQuery-UI have a lot more choices:[Easings](http://easings.net/zh-tw "Easings")
-+ 參考範例 carousel
 
 
 ## 其他參考函示庫(圖表)
