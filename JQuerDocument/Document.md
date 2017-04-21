@@ -13,6 +13,7 @@ $(document).ready(function(){
 });
 ```
 說明: 以上兩個是相同的意思，意指在DOM tree載入完成後再執行方法，這個方式主要是用在前端UI要操作DOM tree時使用，但無法回傳任何jQuery相關物件。
+
 Syntax: 
 
 + (function($))(jQuery)
