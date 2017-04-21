@@ -1,22 +1,22 @@
 # jQuery effects
 
-##Basic Showing and Hiding
+## Basic Showing and Hiding
 + .show()
 + .hide()
 + .toggle()
 
-##Fading Elements In and Out
+## Fading Elements In and Out
 + .fadeIn()
 + .fadeOut()
 + .fadeToggle()
 + .fadeTo()
 
-##Sliding Elements
+## Sliding Elements
 + .slideDown()
 + .slideUp()
 + .slideToggle()
 
-##Animates
+## Animates
 Syntax: 
 <pre><code>.animate( properties [, duration ] [, easing ] [, complete ] )</code></pre>
 EX.
@@ -26,7 +26,7 @@ $('#message').animate(
 );
 </code></pre>
 
-##Easings
+## Easings
 + jQuery can only use 'swing' or 'linear' effect
 + jQuery-UI have a lot more choices:[Easings](http://easings.net/zh-tw "Easings")
 + 參考範例 carousel
