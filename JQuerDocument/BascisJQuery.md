@@ -70,6 +70,7 @@ $('.menu_list').children().not('.organic');
 + .append() / .prepend()
 + .before() / .after()
 + .text()
++ [.wrap](http://www.w3school.com.cn/jquery/manipulation_wrap.asp ".wrap") / .unwrap  //把每個被選元素放置在指定的HTML 內容或元素中。
 
 ##  Replace element
 + .ReplaceWith() //替換元素
