@@ -1,26 +1,25 @@
 $(function() {
-    function card(name, suit, value) {
-        this.name = name;
-        this.suit = suit;
-        this.value = value;
-    }
+
 
     var used_cards = new Array();
 
-    $('#btnDeal').click(function() {
+    //第一次發兩張牌
+    $("#btnDeal").click(function() {
         deal();
+        $(this).toggle();
+        $("#btnHit").toggle();
+        $("#btnStick").toggle();
+    });
+
+    // 發牌
+    $("#btnHit").click(function() {
+        hit();
     });
 
     function deal() {
         for (var i = 0; i < 2; i++) {
             hit();
         }
-    }
-
-    function getRandom(num) {
-        var mynum = Math.floor(Math.random() * num);
-
-        return mynum;
     }
 
     function hit() {
@@ -35,7 +34,7 @@ $(function() {
                 var c = deck[index];
                 // 將這張牌的索引加到陣列
                 used_cards[used_cards.length] = index;
-                //hand.cards[hand.cards.length] = c;
+                hand.cards[hand.cards.length] = c;
 
                 var $d = $('<div>');
                 $d.addClass('current_hand').appendTo('#my_hand');
@@ -50,9 +49,55 @@ $(function() {
         } while (!goodcard)
 
         goodcard = false;
+        hand.sumCardTotal();
     }
 
-    var hand = {}
+    var hand = {
+        cards: new Array(),
+        current_total: 0,
+
+        sumCardTotal: function() {
+            this.current_total = 0;
+
+            for (var i = 0; i < this.cards.length; i++) {
+                var c = this.cards[i];
+                console.dir(c);
+                this.current_total += c.value;
+            }
+
+            $('#hdrTotal').html('Total:' + this.current_total);
+
+            if (this.current_total > 21) {
+                $("#btnStick").trigger("click");
+                $("#imgResult").attr('src', 'images/x2.png');
+                $("#hdrResult").html("BUST!")
+                    .attr('class', 'lose');
+            } else if (this.current_total == 21) {
+                $("#btnStick").trigger("click");
+                $("#imgResult").attr('src', 'images/check.png');
+                $("#hdrResult").html("BlackJack!")
+                    .attr('class', 'win');
+            } else if (this.current_total <= 21 && this.cards.length == 5) {
+                $("#btnStick").trigger("click");
+                $("#imgResult").attr('src', 'images/check.png');
+                $("#hdrResult").html("BlackJack - 5 card trick!")
+                    .attr('class', 'win');
+            } else {}
+        }
+    }
+
+    function getRandom(num) {
+        var mynum = Math.floor(Math.random() * num);
+
+        return mynum;
+    }
+
+    // 建立建構子
+    function card(name, suit, value) {
+        this.name = name;
+        this.suit = suit;
+        this.value = value;
+    }
 
     var deck = [
         new card('Ace', 'Hearts', 11),
