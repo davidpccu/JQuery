@@ -15,15 +15,16 @@ $(document).ready(function(){
 說明: 以上兩個是相同的意思，意指在DOM tree載入完成後再執行方法，這個方式主要是用在前端UI要操作DOM tree時使用，但無法回傳任何jQuery相關物件。
 
 
-+ (function($))(jQuery)
++ (function($))(jQuery) 立即函式（匿名函式）IIFE(Immediately Invoked Function Expression)
 ```
 (function($){
     //something
 })(jQuery);
 ```
 說明: 
-1. 這個方式主要是用在jQuery plugin，實際上是執行了一個匿名的function並回傳jQuery物件，當jQuery載入完成後便會開始執行，但無法操作DOM tree。
-2. 基本上是()(para)匿名方法(anonymous function)，傳承jQuery的函式庫，jQuery plugins都是用這樣的架構。
+1. 在程式邏輯上是『製造一個匿名的函數並且立刻執行』，其目的主要在於產生一個私有的scope，使在其內宣告的變數不會與外界混淆。
+2. 這個方式主要是用在jQuery plugin，實際上是執行了一個匿名的function並回傳jQuery物件，當jQuery載入完成後便會開始執行，但無法操作DOM tree。
+3. 基本上是()(para)匿名方法(anonymous function)，傳承jQuery的函式庫，jQuery plugins都是用這樣的架構。
 
 ### Plugin 樣版
 ```
