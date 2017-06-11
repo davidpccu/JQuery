@@ -58,6 +58,39 @@ $(window).on('load', function() {
 
 [參考](http://blog.miniasp.com/post/2010/07/24/jQuery-ready-vs-load-vs-window-onload-event.aspx "參考")
 
+
+## 函式種類
+
+### 具名函式宣告 (function variable)
+```
+function testFunction(){
+    $('div').hide();
+}
+
+ex:
+
+testFunction();
+```
+
+### 具名函式表達式 (function expression)
+```
+var myFunction = function(){
+    $('div').show();
+}
+
+ex: 
+
+$('#myApp').click(myFunction);
+```
+
+### 匿名函式 (self-executing)
+```
+$(document).ready(function(){
+    $('div').show();
+});
+```
+
+
 ## use strict (嚴格模式) strict mode
 ```
 "use strict";
