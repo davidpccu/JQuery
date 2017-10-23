@@ -229,3 +229,8 @@ $( "button" ).click(function() {
     p = $( "p" ).detach();
   }
 </code></pre>
+
+
+## 取得表單資料、單選 Radio 與多選 Checkbox 的方法
+
+[Will 保哥blog](https://blog.miniasp.com/post/2011/04/26/jQuery-get-form-value-Checkbox-Radio.aspx "")
