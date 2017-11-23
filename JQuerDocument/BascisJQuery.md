@@ -235,6 +235,11 @@ $( "button" ).click(function() {
 
 [Will 保哥blog](https://blog.miniasp.com/post/2011/04/26/jQuery-get-form-value-Checkbox-Radio.aspx "")
 
+判斷checkbox 是否已被勾選
+<pre><code>
+    $("#check").prop("checked")     // prop  才會回傳 true 或 false
+</code></pre>
+
 ## Iframe中 取得 parent物件的方法
 
 <pre><code>
