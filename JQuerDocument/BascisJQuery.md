@@ -85,6 +85,12 @@ $('.menu_list').children().not('.organic');
 + .attr()
 + .removeAttr()
 
+## Setting and Reading html property
++ [.prop()](http://www.gbtags.com/api/jquery/jquery-doc/prop/index.html ".prop")
++ .removeProp()
+
+屬性（Attribute）與特性（Property）
+
 # Events
 ## Mouse event
 + .click()
