@@ -1,9 +1,9 @@
 # jQuery Document
 
-## different with document.ready
+### different with document.ready
 
 + $(function)
-```
+```js
 $(function() {
     //dosomething
 });
@@ -14,9 +14,10 @@ $(document).ready(function(){
 ```
 說明: 以上兩個是相同的意思，意指在DOM tree載入完成後再執行方法，這個方式主要是用在前端UI要操作DOM tree時使用，但無法回傳任何jQuery相關物件。
 
+### 立即函式 IIFE
 
 + (function($))(jQuery) 立即函式（匿名函式）IIFE(Immediately Invoked Function Expression)
-```
+```js
 (function($){
     //something
 })(jQuery);
@@ -26,8 +27,25 @@ $(document).ready(function(){
 2. 這個方式主要是用在jQuery plugin，實際上是執行了一個匿名的function並回傳jQuery物件，當jQuery載入完成後便會開始執行，但無法操作DOM tree。
 3. 基本上是()(para)匿名方法(anonymous function)，傳承jQuery的函式庫，jQuery plugins都是用這樣的架構。
 
-### Plugin 樣版
+#### 補充
+
+```js
+
+function  foo () { .. }
+
+// `foo`是函數引用表達式，然後用`()`執行它
+foo ();
+
+// `IIFE`是函數表達式，然後用`()`執行它 
+( function  IIFE (){ .. })();
+
 ```
+說明: 
+1. 圍繞在函數表達式(function IIFE(){ .. })外部的( .. )只是一個微妙的JS文法，我們需要它來防止函數表達式被看作一個普通的函數聲明。
+2. 在表達式末尾的最後的()—— })();這一行——才是實際立即執行它前面的函數表達式的東西。
+
+### Plugin 樣版
+```js
 (function( $ ){
 
     $.fn.mytoolbox = function() {
@@ -47,7 +65,7 @@ $(document).ready( function() {
 [參考](http://expect7.pixnet.net/blog/post/38085270-%5B%E7%A8%8B%E5%BC%8F%5D%5Bjquery%5D-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8Bjquery-plugin!-hello-worl "參考")
 
 + jQuery(window).load()
-```
+```js
 $(window).on('load', function() {
     $('body').addClass('loaded');
 });
@@ -92,7 +110,9 @@ $(document).ready(function(){
 
 
 ## use strict (嚴格模式) strict mode
-```
+
+根據你擺放strict模式註解的位置，你可以為一個單獨的函數，或者是整個一個文件切換到strict模式：
+```js
 "use strict";
 
 function testFunction(){
@@ -101,6 +121,20 @@ function testFunction(){
 }
 // This causes a syntax error.
 testvar = 5;
+```
+
+```js
+function  foo () {
+	 " use strict " ;
+
+	//這部分代碼是strict模式的
+
+	function  bar () {
+		 //這部分代碼是strict模式的
+	}
+}
+
+//這部分代碼不是strict模式的
 ```
 [參考](https://msdn.microsoft.com/library/br230269(v=vs.94).aspx "參考")
 
