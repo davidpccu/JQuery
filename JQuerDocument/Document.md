@@ -138,9 +138,65 @@ function  foo () {
 ```
 [參考](https://msdn.microsoft.com/library/br230269(v=vs.94).aspx "參考")
 
+## 模組
 
+當程式碼愈寫愈多，應用程式的規模愈來愈大時，我們需要一個用於組織與管理程式碼的方式，這個需求相當明確，或許不只是應用程式發展到一定程度才會考慮這些，而是應該在開發程式之前的規劃就需要考量進來。
 
+```js
 
+function  CoolModule () {
+	 var something =  " cool " ;
+	 var another = [ 1 , 2 , 3 ];
+
+	function  doSomething () {
+		 console . log ( something );
+	}
+
+	function  doAnother () {
+		 console . log ( another . join ( " ! " ) );
+	}
+
+	return {
+		doSomething : doSomething,
+		doAnother : doAnother
+	};
+}
+
+var foo =  CoolModule ();
+
+foo . doSomething (); // cool 
+foo . doAnother (); // 1 ! 2 ! 3
+
+```
+
++ 必須有一個外部的外圍函數，而且它必須至少被調用一次（每次創建一個新的模塊實例）。
++ 外圍的函數必須至少返回一個內部函數，這樣這個內部函數才擁有私有作用域的閉包，並且可以訪問和/或修改這個私有狀態。
+
+```js
+
+var foo = ( function  CoolModule () {
+	 var something =  " cool " ;
+	 var another = [ 1 , 2 , 3 ];
+
+	function  doSomething () {
+		 console . log ( something );
+	}
+
+	function  doAnother () {
+		 console . log ( another . join ( " ! " ) );
+	}
+
+	return {
+		doSomething : doSomething,
+		doAnother : doAnother
+	};
+})();
+
+foo . doSomething (); // cool 
+foo . doAnother (); // 1 ! 2 ! 3
+
+```
+這裡，我們將模塊放進一個IIFE中，而且我們立即調用它，並把它的返回值直接賦值給我們單獨的模塊實例標識符foo。
 
 
 
