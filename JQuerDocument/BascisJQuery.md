@@ -18,6 +18,15 @@ Change a property of the element<br>
 + Descendant selectors : <pre><code> $('#navBar a') </code></pre>
 + Child selectors : <pre><code> $('body > p') </code></pre>
 + Adjacent sibling : <pre><code> $('h2 + div') or $('h2 ~ div') </code></pre>
++ Parent selectors : <pre><code> $("span").parent(".class") </code></pre>
++ Parents selectors :
+<pre><code> 
+// 所有祖先元素，不限父元素
+$("span").parents('ul')
+</code></pre>
++ Next selectors : <pre><code> jQuery.next() </code></pre>
++ NextAll selectors : <pre><code> jQuery.nextAll() </code></pre>
++ Find selectors : <pre><code> jQuery.find(expr) </code></pre>
 
 ## Attribute selectors
 + [attribute] : <pre><code> $('a[href]') </code></pre>
