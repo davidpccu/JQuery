@@ -1,5 +1,15 @@
 # jQuery Document
 
+### Add jquery to web page in Chrome DevTools
+
+```js
+var jq = document.createElement('script');
+jq.src = "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
+document.getElementsByTagName('head')[0].appendChild(jq);
+
+jQuery.noConflict();
+```
+
 ### different with document.ready
 
 + $(function)
