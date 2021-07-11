@@ -260,3 +260,13 @@ $( "button" ).click(function() {
 <pre><code>
     $('#parentPrice', window.parent.document).html();
 </code></pre>
+
+## Canvas 圖片下載
+
+``` js
+
+var link = document.createElement('a');
+link.download = 'test.png';
+link.href = document.getElementById('captcha').getElementByTagName('canvas')[0].toDataURL;
+link.click();
+```
