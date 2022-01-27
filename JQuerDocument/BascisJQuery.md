@@ -270,3 +270,14 @@ link.download = 'test.png';
 link.href = document.getElementById('captcha').getElementByTagName('canvas')[0].toDataURL;
 link.click();
 ```
+
+## 自動連點
+``` js
+await new Promise(r => setTimeout(r, 5000))
+
+let btn
+setInterval(() => {
+  if(!btn) btn = document.querySelector('td[data-apielement="GalaXY Kats"]~td>button')
+  if (btn) btn.click()
+}, 250)
+```
